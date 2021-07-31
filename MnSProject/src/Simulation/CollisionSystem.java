@@ -91,20 +91,17 @@ public class CollisionSystem {
     }
     public static void main(String[] args) {
 
-        StdDraw.setCanvasSize(600, 600);
+        StdDraw.setCanvasSize(700, 700);
 
         // enable double buffering
         StdDraw.enableDoubleBuffering();
-
+        
         // the array of particles
         Particle[] particles;
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter 1 for random particle placement, 2 for input: ");
-        int choice =sc.nextInt();
         // create n random particles
-        if (choice == 1) {
-        	System.out.print("\nEnter the number of Particles: ");
-            int n = sc.nextInt();
+        if (args.length == 1) {
+            int n = Integer.parseInt(args[0]);
             particles = new Particle[n];
             for (int i = 0; i < n; i++)
                 particles[i] = new Particle();
@@ -116,7 +113,6 @@ public class CollisionSystem {
             int n = sc.nextInt();
             particles = new Particle[n];
             for (int i = 0; i < n; i++) {
-            	System.out.println("enter parameters: ");
                 double rx     =sc.nextDouble();
                 double ry     =sc.nextDouble();
                 double vx     = sc.nextDouble();

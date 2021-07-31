@@ -38,5 +38,4 @@ package Simulation;
             if (b != null && b.count() != countB) return false;
             return true;
         }
-   
     }

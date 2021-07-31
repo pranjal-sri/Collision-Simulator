@@ -23,7 +23,6 @@ public class Particle {
 		this.color = color;
 	}
 
-	
 	public Particle() {
 		Random stream = new Random();
 		rx = stream.nextDouble();
@@ -35,7 +34,6 @@ public class Particle {
 		color = Color.BLACK;
 	}
 
-	
 	public void move(double dt) {
 		rx += vx * dt;
 		ry += vy * dt;
@@ -46,12 +44,10 @@ public class Particle {
 		StdDraw.filledCircle(rx, ry, radius);
 	}
 
-	
 	public int count() {
 		return count;
 	}
 
-	
 	public double timeToHit(Particle that) {
 		if (this == that)
 			return INFINITY;
@@ -91,7 +87,6 @@ public class Particle {
 			return INFINITY;
 	}
 
-	
 	public double timeToHitHorizontalWall() {
 		if (vy > 0)
 			return (1.0 - ry - radius) / vy;
@@ -101,7 +96,6 @@ public class Particle {
 			return INFINITY;
 	}
 
-	
 	public void bounceOff(Particle that) {
 		double dx = that.rx - this.rx;
 		double dy = that.ry - this.ry;
@@ -128,18 +122,16 @@ public class Particle {
 		that.count++;
 	}
 
-		public void bounceOffVerticalWall() {
+	public void bounceOffVerticalWall() {
 		vx = -vx;
 		count++;
 	}
 
-	
 	public void bounceOffHorizontalWall() {
 		vy = -vy;
 		count++;
 	}
 
-	
 	public double kineticEnergy() {
 		return 0.5 * mass * (vx * vx + vy * vy);
 	}
