@@ -13,7 +13,7 @@ We can specify the number of particles initially along with attributes like mass
 <p>&nbsp;</p>
 Following is an example of the diffusion simulation:
 <p align="center">
-    <img align="center" src="MnsProject/assets/diffusionGif.gif"></img>
+    <img align="center" src="/MnsProject/assets/diffusionGif.gif"></img>
 </p>
 
 # <p>&nbsp;</p>
